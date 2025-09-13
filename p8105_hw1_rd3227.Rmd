@@ -14,4 +14,11 @@ library(moderndive)
 data("early_january_weather")
 ```
 
+Take a look at the dataset help file.
+
+```{r eval=FALSE}
+help("early_january_weather")
+```
+
+The early_january_weather dataset contains hourly meteorological data for LGA, JFK and EWR for the month of January 2013. It is a data frame of `r nrow(early_january_weather)` rows representing hourly measurements and `r ncol(early_january_weather)` variables, including `r names(early_january_weather)`. The mean temperature measured in these places during this period is `r mean(early_january_weather$temp)`.
 
