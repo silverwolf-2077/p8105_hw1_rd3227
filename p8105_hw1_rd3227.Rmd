@@ -64,10 +64,11 @@ For vec_char(character vector of length 10) and vec_factor(factor vector of leng
 
 Convert the variables to numeric.
 
-```{r}
+```{r results='hide', warning=FALSE}
 as.numeric(my_df$x)
 as.numeric(my_df$greater_0)
 as.numeric(my_df$vec_char)
 as.numeric(my_df$vec_factor)
 ```
 
+The as.numeric function works for the variables x, greater_0 and vec_factor, but when applied to vec_char, it shows "Warning: NAs introduced by coercion". This shows that mean() works directly only on numeric and logical variables, character variables cannot be averaged, and factor variables need to be explicitly converted to numeric to compute a mean. 
