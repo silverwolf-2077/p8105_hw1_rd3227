@@ -52,10 +52,10 @@ my_df =
 Try to take the mean of each variable in the dataframe.
 
 ```{r}
-mean(my_df$x)
-mean(my_df$greater_0)
-mean(my_df$vec_char)
-mean(my_df$vec_factor)
+mean(pull(my_df, x))
+mean(pull(my_df, greater_0))
+mean(pull(my_df, vec_char))
+mean(pull(my_df, vec_factor))
 ```
 
 For x(random sample of size 10 from a standard Normal distribution) and greater_0(logical vector indicating whether elements of the sample are greater than 0), it works.
